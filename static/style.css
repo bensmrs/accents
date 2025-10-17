@@ -1,0 +1,171 @@
+:root {
+    --bg:#0f1115;
+    --fg:#e6e6e6;
+    --muted:#9aa0a6;
+    --accent:#4f8cff;
+    --panel:#171923;
+    --border: #2a2e42;
+    --sec-bg: #0f1320;
+    --record: #f66;
+}
+
+body {
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background:var(--bg);
+    color:var(--fg);
+}
+
+header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+}
+
+h1 {
+    margin:0;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto 112px auto;
+}
+
+section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 16px;
+}
+
+.row > button {
+    width: 45px;
+}
+
+select, button {
+    background: var(--sec-bg);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.chart {
+    background: var(--sec-bg);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px;
+    position: relative;
+}
+
+.chart:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin: 4px 0 8px;
+    font-size: 1em;
+    color: var(--fg);
+}
+
+input[type="range"] {
+    accent-color: var(--accent);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    border-top: 1px solid var(--border);
+    background: var(--panel);
+}
+
+footer > section {
+    display: inline-block;
+    margin: 8px;
+    padding: 8px;
+    vertical-align: middle;
+    max-width: calc(100% - 182px);
+    border-radius: 16px;
+}
+
+footer > section >h2 {
+    font-size: 1.2em;
+}
+
+#sample-select {
+    width: calc(100% - 53px);
+    margin-right: 8px;
+}
+
+.row > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#user-record {
+    margin-right: 8px;
+}
+
+section.record > button {
+    height: 52px;
+    width: 52px;
+    vertical-align: bottom;
+}
+
+footer > .row {
+    font-size: .9em;
+    line-height: 24px;
+    margin-bottom: -8px;
+}
+
+#offset-slider {
+    width: 250px;
+}
+
+footer > .row > * {
+    width: 60px;
+}
+
+footer > .row > output {
+    text-align: right;
+}
+
+#user-record.stop::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: var(--fg);
+}
+
+#user-record.record::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: var(--record);
+    border-radius: 10px;
+}
+
+.chart > input[type="range"] {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    height: 240px;
+    width: 20px;
+    margin: 0;
+    position: absolute;
+}
+
+button:enabled {
+    cursor: pointer;
+}
