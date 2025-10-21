@@ -76,10 +76,11 @@ def analyze(path, pitch_floor=75, pitch_ceiling=500, time_step=0.01):
                 if math.isnan(formant):
                     f_vals.append([])
                     v_vals.append(None)
-                    continue
+                    break
                 f.append(formant)
-            f_vals.append(f)
-            v_vals.append(closest_vowel(f[0], f[1], f[2]))
+            else:
+                f_vals.append(f)
+                v_vals.append(closest_vowel(f[0], f[1], f[2]))
 
     return {
         'time': times,
